@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /404
+Disallow: /404/
+
+Host: https://humayra.me
+Sitemap: https://humayra.me/sitemap.xml
