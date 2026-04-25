@@ -1,0 +1,116 @@
+import type { Publication } from "@/types";
+
+export const publications: Publication[] = [
+  {
+    id: "hossain2026transport",
+    title:
+      "Transport-Corrected Adam: Geometry-Aware Momentum for Adaptive Optimization",
+    authors: ["M. A. Hossain", "Y. Sarker", "M. H. K. Rime"],
+    venue: "Proc. International Conference on Machine Learning (ICML)",
+    venueAbbr: "ICML'26",
+    venueColor: "#c41e3a",
+    year: 2026,
+    selected: true,
+    annotation: "Submitted",
+  },
+  {
+    id: "bhadra2025dual",
+    title:
+      "Dual Graph Attention Network for Robust Fault Diagnosis in Photovoltaic Inverters",
+    authors: [
+      "A. B. Bhadra",
+      "M. H. K. Rime",
+      "Y. Sarker",
+      "E. A. Bhuiyan",
+      "M. J. Hossen",
+      "M. K. Morol",
+    ],
+    venue: "Scientific Reports (Nature), vol. 15, no. 1, p. 31330",
+    venueAbbr: "Scientific Reports",
+    venueColor: "#0d7377",
+    year: 2025,
+    selected: true,
+    bibtex: `@article{bhadra2025dual,
+  title={Dual graph attention network for robust fault diagnosis in photovoltaic inverters},
+  author={Bhadra, Apurba Banik and Rime, Most Humayra Khanom and Sarker, Yeahia and Bhuiyan, Erphan A. and Hossen, M. Jahirul and Morol, Md Kishor},
+  journal={Scientific Reports},
+  volume={15},
+  number={1},
+  pages={31330},
+  year={2025},
+  publisher={Nature Publishing Group UK London}
+}`,
+  },
+  {
+    id: "ahmed2024generative",
+    title:
+      "The Generative AI Landscape in Education: Mapping the Terrain of Opportunities, Challenges, and Student Perception",
+    authors: [
+      "Z. Ahmed",
+      "S. S. Shanto",
+      "M. H. K. Rime",
+      "M. K. Morol",
+      "N. Fahad",
+      "M. J. Hossen",
+      "Md Abdullah-Al-Jubair",
+    ],
+    venue: "IEEE Access, vol. 12, pp. 147023–147050",
+    venueAbbr: "Access",
+    venueColor: "#0d7377",
+    year: 2024,
+    selected: false,
+    bibtex: `@article{ahmed2024generative,
+  title={The Generative AI Landscape in Education: Mapping the Terrain of Opportunities, Challenges, and Student Perception},
+  author={Ahmed, Zarif and Shanto, Shakib Sadat and Rime, Most Humayra Khanom and Morol, Md Kishor and Fahad, Nafiz and Hossen, M. Jahirul and Abdullah-Al-Jubair, Md},
+  journal={IEEE Access},
+  volume={12},
+  pages={147023--147050},
+  year={2024},
+  publisher={IEEE}
+}`,
+  },
+  {
+    id: "bhadra2023paradigm",
+    title:
+      "Paradigm-shifting the Subaquatic Frontier: Advancements and Prospects of Sensor-Based Underwater Positioning Systems",
+    authors: [
+      "A. Bhadra",
+      "F. Rayhan",
+      "M. H. K. Rime",
+      "S. Jahan",
+      "E. A. Bhuiyan",
+      "S. D. Urmi",
+    ],
+    venue: "Preprints",
+    venueAbbr: "Preprint",
+    venueColor: "#4b0082",
+    year: 2023,
+    selected: false,
+    bibtex: `@article{bhadra2023paradigm,
+  title={Paradigm-shifting the Subaquatic Frontier: Advancements and Prospects of Sensor-Based Underwater Positioning Systems},
+  author={Bhadra, Apurba Banik and Rayhan, Farhan and Rime, Most Humayra Khanom and Jahan, Sumaiya and Bhuiyan, Erphan A. and Urmi, Sumaiya Dilshad},
+  year={2023},
+  publisher={Preprints}
+}`,
+  },
+  {
+    id: "rime2022attention",
+    title:
+      "Attention-Aware Memory Aggregation Network for Hyperspectral Image Classification",
+    authors: ["M. H. K. Rime", "Md. A. Hossain", "A. Qazi"],
+    venue:
+      "Proc. 25th International Conference on Computer and Information Technology (ICCIT), IEEE",
+    venueAbbr: "ICCIT'22",
+    venueColor: "#00369f",
+    year: 2022,
+    selected: true,
+    bibtex: `@inproceedings{rime2022attention,
+  title={Attention-Aware Memory Aggregation Network for Hyperspectral Image Classification},
+  author={Rime, Most Humayra Khanom and Hossain, Md. Akram and Qazi, Asfaque},
+  booktitle={2022 25th International Conference on Computer and Information Technology (ICCIT)},
+  pages={1--6},
+  year={2022},
+  organization={IEEE}
+}`,
+  },
+];

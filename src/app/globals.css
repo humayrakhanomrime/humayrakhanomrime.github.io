@@ -1,0 +1,362 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: var(--surface);
+  --color-surface-50: var(--surface-50);
+  --color-surface-100: var(--surface-100);
+  --color-surface-200: var(--surface-200);
+  --color-surface-300: var(--surface-300);
+
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+
+  --color-text-primary: var(--tp);
+  --color-text-secondary: var(--ts);
+  --color-text-muted: var(--tm);
+
+  --font-sans: "Roboto", system-ui, sans-serif;
+  --font-heading: "Roboto Slab", serif;
+  --font-mono: "Roboto Mono", monospace;
+}
+
+@layer base {
+  :root {
+    --surface: #f4f6f8;
+    --surface-50: #f8f9fb;
+    --surface-100: #eef1f4;
+    --surface-200: #e6eaee;
+    --surface-300: rgba(0, 0, 0, 0.1);
+    --accent: #0069d1;
+    --accent-dim: #005bb5;
+    --tp: #000000;
+    --ts: #424242;
+    --tm: #a0a0a0;
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.08);
+    --nav-bg: rgba(244, 246, 248, 0.9);
+    --nav-border: rgba(0, 0, 0, 0.08);
+    --footer-bg: #f4f6f8;
+    --footer-border: rgba(0, 0, 0, 0.08);
+  }
+
+  .dark {
+    --surface: #1c1c1d;
+    --surface-50: #212529;
+    --surface-100: #212529;
+    --surface-200: #2c3237;
+    --surface-300: #424246;
+    --accent: #2698ba;
+    --accent-dim: #1e7a96;
+    --tp: #e8e8e8;
+    --ts: #b0b0b0;
+    --tm: #828282;
+    --card-bg: #212529;
+    --card-border: #424246;
+    --nav-bg: rgba(28, 28, 29, 0.95);
+    --nav-border: #424246;
+    --footer-bg: #212529;
+    --footer-border: #424246;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    background-color: var(--surface);
+    color: var(--ts);
+    transition: background-color 0.3s, color 0.3s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    transition: color 0.2s;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #444;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  @media (max-width: 360px) {
+    html {
+      font-size: 16px;
+    }
+  }
+}
+
+.nav-bg {
+  background-color: var(--nav-bg);
+  border-color: var(--nav-border);
+}
+
+.card-bg {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+.footer-section {
+  background-color: var(--footer-bg);
+  border-color: var(--footer-border);
+}
+
+.prose {
+  color: var(--ts);
+  max-width: 65ch;
+  line-height: 1.75;
+  font-size: 1rem;
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.prose > * + * {
+  margin-top: 1em;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-heading);
+  color: var(--tp);
+  font-weight: 500;
+  line-height: 1.3;
+  scroll-margin-top: 80px;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  text-align: left;
+  hyphens: manual;
+}
+
+.prose > h1:first-child,
+.prose > h2:first-child,
+.prose > h3:first-child {
+  margin-top: 0;
+}
+
+.prose h1 { font-size: 1.6rem; }
+.prose h2 { font-size: 1.35rem; }
+.prose h3 { font-size: 1.15rem; }
+.prose h4 { font-size: 1rem; }
+
+.prose p {
+  color: var(--ts);
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose a:hover {
+  color: var(--accent-dim);
+}
+
+.prose strong {
+  color: var(--tp);
+  font-weight: 600;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5em;
+}
+
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+
+.prose li {
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
+}
+
+.prose li::marker {
+  color: var(--tm);
+}
+
+.prose li > ul,
+.prose li > ol {
+  margin-top: 0.35em;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1em;
+  color: var(--ts);
+  font-style: italic;
+  margin: 1.5em 0;
+}
+
+.prose blockquote p {
+  margin: 0;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  background: var(--surface-200);
+  color: var(--tp);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.prose pre {
+  font-family: var(--font-mono);
+  background: var(--surface-200);
+  color: var(--tp);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 1.5em 0;
+  border: 1px solid var(--surface-300);
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.prose pre [data-line] {
+  display: block;
+  padding: 0 0.25em;
+  border-left: 2px solid transparent;
+}
+
+.prose pre [data-highlighted-line] {
+  background: var(--surface-300);
+  border-left-color: var(--accent);
+}
+
+.prose pre [data-line-numbers] {
+  counter-reset: line;
+}
+
+.prose pre [data-line-numbers] [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1.75em;
+  margin-right: 1em;
+  text-align: right;
+  color: var(--tm);
+}
+
+html:not(.dark) .prose pre code span {
+  color: var(--shiki-light) !important;
+}
+
+html.dark .prose pre code span {
+  color: var(--shiki-dark) !important;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin: 1.5em 0;
+}
+
+.prose th,
+.prose td {
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid var(--surface-300);
+  text-align: left;
+}
+
+.prose th {
+  color: var(--tp);
+  font-weight: 600;
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--surface-300);
+  margin: 2em 0;
+}
+
+.prose img {
+  border-radius: 6px;
+  margin: 1.5em auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.prose figure {
+  margin: 1.5em 0;
+}
+
+.prose figcaption {
+  font-size: 0.85em;
+  color: var(--tm);
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.prose .heading-anchor {
+  color: var(--tm);
+  opacity: 0;
+  margin-left: 0.4em;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  font-weight: 400;
+}
+
+.prose h1:hover .heading-anchor,
+.prose h2:hover .heading-anchor,
+.prose h3:hover .heading-anchor,
+.prose h4:hover .heading-anchor,
+.prose .heading-anchor:focus {
+  opacity: 1;
+}
