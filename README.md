@@ -42,4 +42,11 @@ This site is built for a **user site** (served at `https://<username>.github.io/
 
 ## 📄 License
 
-Released under the [MIT License](LICENSE.md). © 2026 Humayra Khanom Rime.
+Released under the [MIT License](LICENSE.md).
+ </br>
+ </br>
+
+ 
+<div align="center">
+© 2026 Humayra Khanom Rime.
+</div>
