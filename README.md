@@ -1,4 +1,4 @@
-# Humayra Khanom Rime
++<h1 align="center">Humayra Khanom Rime</h1>                                                                                                                                          
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js" alt="Next.js" />
