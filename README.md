@@ -1,4 +1,4 @@
-# Humayra Khanom Rime — Academic Portfolio
+# Humayra Khanom Rime
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js" alt="Next.js" />
@@ -27,7 +27,7 @@ npm run build
 npx serve out
 ```
 
-## 🌐 Deployment (`username.github.io`)
+## 🌐 Deployment
 
 This site is built for a **user site** (served at `https://<username>.github.io/`), so no `basePath` is needed.
 
