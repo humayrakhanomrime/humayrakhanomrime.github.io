@@ -3,10 +3,6 @@ import type { NewsItem } from "@/types";
 export const news: NewsItem[] = [
 
   {
-    date: "2026-02-01",
-    content: 'Submitted "Transport-Corrected Adam" to ICML 2026.',
-  },
-  {
     date: "2025-01-15",
     content: "Paper on PV inverter fault diagnosis accepted in Nature Scientific Reports.",
   },
